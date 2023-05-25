@@ -53,7 +53,7 @@ export const Image = ({content, ...props}) => {
                 sizes='(max-width: 576px) 150px, (max-width: 768px) 320px, 640px'
                 alt={legenda}
             />
-            <a href={link}className='position-absolute .animate__zoomIn display-flex justify-content-center overlay mx-2 px-2 text-center'>
+            <a href={link} target='_blank' rel="noreferrer" className='position-absolute .animate__zoomIn display-flex justify-content-center overlay mx-2 px-2 text-center'>
                     <div className='text-thin'> @{user} </div>
                     <div className='text-thin'> <i className='fa-solid fa-heart mr-1'/> {upvotes} </div>
                     <div className='text-thin'> <i className='fa-solid fa-comment mr-1'/> {comentarios} </div>
