@@ -20,6 +20,7 @@ export const Feed = ({endpoint}) => {
             {/* Loader */}
             { loading && <Loading/> }
 
+            {/* Imagens do Feed */}
             { data &&
                 // Fragment pois retornamos múltiplos elementos
                 <Fragment>
@@ -29,6 +30,7 @@ export const Feed = ({endpoint}) => {
                     })}
                 </Fragment>
             }
+
             </div>
         </div>
     );
