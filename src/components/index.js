@@ -1,4 +1,6 @@
 export * from './ErrorAlert'
+export * from './Feed'
 export * from './Image'
 export * from './Loading'
+export * from './Logo'
 export * from './useFetch'
