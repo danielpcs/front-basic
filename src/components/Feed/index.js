@@ -8,25 +8,25 @@ import { useFetch } from "../useFetch"
 export const Feed = ({endpoint}) => {
     
     let fetch = useFetch(endpoint)
-    const {data} = fetch
+    const {data, error, loading} = fetch
 
     return (
         <div className='container'>
             <div className='row'>
 
             {/* Alerta de erro */}
-            { fetch.error && <ErrorAlert message={fetch.error}/>}
+            { error && <ErrorAlert message={error}/> }
 
             {/* Loader */}
-            { fetch.loading && <Loading/>}
+            { loading && <Loading/> }
 
-            {!fetch.loading && !fetch.error && fetch.data &&
+            { data &&
                 // Fragment pois retornamos múltiplos elementos
                 <Fragment>
-                {data.map((content) =>{
-                    // O atributo key é necessário para gerenciamento de listas pelo React
-                    return <Image key={content._id} content={content}/>
-                })}
+                    {data.map((content) =>{
+                        // O atributo key é utilizado para gerenciamento de listas pelo React
+                        return <Image key={content._id} content={content}/>
+                    })}
                 </Fragment>
             }
             </div>
