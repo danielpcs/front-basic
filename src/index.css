@@ -1,0 +1,7 @@
+body {
+  margin: 0;
+
+  background-image: url('background.svg') !important;
+  background-repeat: repeat !important;
+  background-size: contain !important;
+}

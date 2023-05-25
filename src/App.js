@@ -1,4 +1,5 @@
 import logo from './logo.svg';
+import './App.css'
 import { Fragment } from 'react';
 import { ErrorAlert, Image, Loading, useFetch } from './components';
 
@@ -20,9 +21,10 @@ function App() {
       <div className='container'>
         <div className='row'>
 
+          {/* Alerta de erro */}
           { fetch.error && <ErrorAlert message={fetch.error}/>}
 
-          
+          {/* Loader */}
           { fetch.loading && <Loading/>}
 
           {!fetch.loading && !fetch.error && fetch.data &&
